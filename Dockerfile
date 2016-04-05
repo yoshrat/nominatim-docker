@@ -37,8 +37,3 @@ COPY config/nominatim.conf /etc/apache2/sites-enabled/default.conf
 # Nominatim create site
 COPY config/local.php ./settings/local.php
 RUN pear install DB && php ./utils/setup.php --create-website /var/www/html
-
-ENV NOMINATIM_USER nominatim
-ENV NOMINATIM_PASSWORD tratata
-
-RUN useradd -m -p $NOMINATIM_PASSWORD $NOMINATIM_USER
