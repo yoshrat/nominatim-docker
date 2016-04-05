@@ -1,3 +1,5 @@
 #!/bin/bash
-service postgresql start
-/usr/sbin/apache2ctl -D FOREGROUND
+set -e
+
+# create nominatim database
+# create postgis extension
