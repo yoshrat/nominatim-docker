@@ -128,6 +128,8 @@ RUN true \
         /var/lib/apt/lists/* \
         /var/lib/postgresql/12/main/*
 
+RUN wget https://github.com/komoot/photon/releases/download/0.3.4/photon-0.3.4.jar
+
 COPY init.sh /app/init.sh
 COPY start.sh /app/start.sh
 COPY startapache.sh /app/startapache.sh
@@ -142,3 +144,4 @@ WORKDIR /app
 
 EXPOSE 5432
 EXPOSE 8080
+EXPOSE 2322
